@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <record name="users" id="1" javaclass="com.wm.util.Values">
+    <record name="Developer" id="2" javaclass="com.wm.app.b2b.server.User">
+      <value name="name" id="3">Developer</value>
+      <value name="pass" id="4">(secret)</value>
+      <value name="passHash" id="5">{sha1}9NCtJsi1opZVUESe8UpRVnNVfxk=</value>
+      <record name="members" id="6" javaclass="com.wm.util.Values">
+        <value name="Developers" id="7">Developers</value>
+        <value name="Everybody" id="8">Everybody</value>
+      </record>
+      <value name="enabled" id="9">true</value>
+    </record>
+    <record name="Replicator" id="10" javaclass="com.wm.app.b2b.server.User">
+      <value name="name" id="11">Replicator</value>
+      <object idref="4" name="pass"/>
+      <value name="passHash" id="12">{sha1}0GEUWSh25cQwPo8tX7a6gbeNwkw=</value>
+      <record name="members" id="13" javaclass="com.wm.util.Values">
+        <object idref="8" name="Everybody"/>
+        <value name="Replicators" id="14">Replicators</value>
+      </record>
+      <object idref="9" name="enabled"/>
+    </record>
+    <record name="Administrator" id="15" javaclass="com.wm.app.b2b.server.User">
+      <value name="name" id="16">Administrator</value>
+      <object idref="4" name="pass"/>
+      <value name="passHash" id="17">{sha1}vI5TC3V31VdoYdyukqpb7AYXHXQ=</value>
+      <record name="members" id="18" javaclass="com.wm.util.Values">
+        <object idref="8" name="Everybody"/>
+        <value name="Administrators" id="19">Administrators</value>
+        <object idref="14" name="Replicators"/>
+      </record>
+      <object idref="9" name="enabled"/>
+    </record>
+    <record name="Default" id="20" javaclass="com.wm.app.b2b.server.User">
+      <value name="name" id="21">Default</value>
+      <object idref="4" name="pass"/>
+      <null name="passHash"/>
+      <record name="members" id="22" javaclass="com.wm.util.Values">
+        <value name="Anonymous" id="23">Anonymous</value>
+        <object idref="8" name="Everybody"/>
+      </record>
+      <object idref="9" name="enabled"/>
+    </record>
+  </record>
+  <record name="groups" id="24" javaclass="com.wm.util.Values">
+    <record name="Developers" id="25" javaclass="com.wm.app.b2b.server.Group">
+      <object idref="7" name="name"/>
+      <object idref="4" name="pass"/>
+      <null name="passHash"/>
+      <record name="members" id="26" javaclass="com.wm.util.Values">
+        <object idref="3" name="Developer"/>
+      </record>
+      <object idref="9" name="enabled"/>
+    </record>
+    <record name="Anonymous" id="27" javaclass="com.wm.app.b2b.server.Group">
+      <object idref="23" name="name"/>
+      <object idref="4" name="pass"/>
+      <null name="passHash"/>
+      <record name="members" id="28" javaclass="com.wm.util.Values">
+        <object idref="21" name="Default"/>
+      </record>
+      <object idref="9" name="enabled"/>
+    </record>
+    <record name="Everybody" id="29" javaclass="com.wm.app.b2b.server.Group">
+      <object idref="8" name="name"/>
+      <object idref="4" name="pass"/>
+      <null name="passHash"/>
+      <record name="members" id="30" javaclass="com.wm.util.Values">
+        <object idref="3" name="Developer"/>
+        <object idref="11" name="Replicator"/>
+        <object idref="16" name="Administrator"/>
+        <object idref="21" name="Default"/>
+      </record>
+      <object idref="9" name="enabled"/>
+    </record>
+    <record name="Administrators" id="31" javaclass="com.wm.app.b2b.server.Group">
+      <object idref="19" name="name"/>
+      <object idref="4" name="pass"/>
+      <null name="passHash"/>
+      <record name="members" id="32" javaclass="com.wm.util.Values">
+        <object idref="16" name="Administrator"/>
+      </record>
+      <object idref="9" name="enabled"/>
+    </record>
+    <record name="Replicators" id="33" javaclass="com.wm.app.b2b.server.Group">
+      <object idref="14" name="name"/>
+      <object idref="4" name="pass"/>
+      <null name="passHash"/>
+      <record name="members" id="34" javaclass="com.wm.util.Values">
+        <object idref="11" name="Replicator"/>
+        <object idref="16" name="Administrator"/>
+      </record>
+      <object idref="9" name="enabled"/>
+    </record>
+  </record>
+  <object idref="29" name="allusers"/>
+  <object idref="15" name="adminUser"/>
+  <object idref="20" name="defUser"/>
+</Values>

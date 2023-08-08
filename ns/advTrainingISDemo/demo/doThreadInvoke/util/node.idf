@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">interface</value>
+  <value name="node_nsName">advTrainingISDemo.demo.doThreadInvoke.util</value>
+  <value name="shared">Ly9oZWxwZXIgdXNlZCBmb3IgY29udmVydGluZyB0aGUgdGFyZ2V0IG5hbWVzcGFjZSBzdHJpbmcg
+aW50byBhbiBOU05hbWUgb2JqZWN0CnByaXZhdGUgc3RhdGljIE5TTmFtZSBpbnZva2VkU3ZjID0g
+bnVsbDs=</value>
+  <value name="encodeutf8">true</value>
+  <value name="extends"></value>
+  <array name="implements" type="value" depth="1">
+  </array>
+  <array name="imports" type="value" depth="1">
+    <value>com.wm.lang.ns.NSName</value>
+    <value>com.wm.app.b2b.server.ServiceThread</value>
+  </array>
+</Values>

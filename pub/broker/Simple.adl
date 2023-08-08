@@ -1,0 +1,27 @@
+// 
+// Simple.adl
+//
+// Copyright (c) 1996-1999, webMethods Inc.  All Rights Reserved.
+
+_fileVersion = 1.0;
+
+eventtype Sample::SimpleEvent {
+    storageType = Persistent;
+    timeToLive = 0;
+    description = "Sample event type.";
+
+    int count;
+}
+
+clientgroup "sample" {
+  description = "Sample client group.";
+  lifeCycle = DestroyOnDisconnect;
+  storageType = Volatile;
+
+  canPublish = {
+    Sample::SimpleEvent
+  };
+  canSubscribe = {
+    Sample::SimpleEvent
+  };
+}

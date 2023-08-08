@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="myDivideIntsWS" targetNamespace="http://sagbase/advTrainingIS.webServices.async.provider:myDivideIntsWS" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapjms="http://www.w3.org/2010/soapjms/" xmlns:tns="http://sagbase/advTrainingIS.webServices.async.provider:myDivideIntsWS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://sagbase/advTrainingIS.webServices.async.provider:myDivideIntsWS" xmlns:tns="http://sagbase/advTrainingIS.webServices.async.provider:myDivideIntsWS" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+          <xsd:element name="myDivideInts" type="tns:myDivideInts"/>
+          <xsd:element name="myDivideIntsResponse" type="tns:myDivideIntsResponse"/>
+          <xsd:complexType name="myDivideInts">
+            <xsd:sequence>
+              <xsd:element name="num1" nillable="true" type="xsd:string"/>
+              <xsd:element name="num2" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="myDivideIntsResponse">
+            <xsd:sequence>
+              <xsd:element name="result" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        	</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="myDivideIntsWS_PortType_myDivideInts">
+    <wsdl:part name="parameters" element="tns:myDivideInts">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="myDivideIntsWS_PortType_myDivideIntsResponse">
+    <wsdl:part name="parameters" element="tns:myDivideIntsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="myDivideIntsWS_PortType">
+    <wsdl:operation name="myDivideInts">
+      <wsdl:input message="tns:myDivideIntsWS_PortType_myDivideInts">
+    </wsdl:input>
+      <wsdl:output message="tns:myDivideIntsWS_PortType_myDivideIntsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="advTrainingIS_webServices_async_provider_myDivideIntsWS_Binder" type="tns:myDivideIntsWS_PortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsp:PolicyReference URI="Addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"/>
+    <wsdl:operation name="myDivideInts">
+      <soap:operation soapAction="advTrainingIS_webServices_async_provider_myDivideIntsWS_Binder_myDivideInts" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="advTrainingIS.webServices.async.provider.myDivideIntsWS">
+    <wsdl:port name="advTrainingIS_webServices_async_provider_myDivideIntsWS_Port" binding="tns:advTrainingIS_webServices_async_provider_myDivideIntsWS_Binder">
+      <soap:address location="http://sagbase:5555/ws/advTrainingIS.webServices.async.provider.myDivideIntsWS/advTrainingIS_webServices_async_provider_myDivideIntsWS_Port"/>
+    <wsa:EndpointReference xmlns:wsa="http://www.w3.org/2005/08/addressing"><wsa:Address>http://sagbase:5555/ws/advTrainingIS.webServices.async.provider.myDivideIntsWS/advTrainingIS_webServices_async_provider_myDivideIntsWS_Port</wsa:Address></wsa:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+    <wsp:Policy Name="Addressing" wsu:Id="Addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"><wsp:ExactlyOne><wsp:All><wsaw:UsingAddressing wsdl:required="true" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"/></wsp:All></wsp:ExactlyOne></wsp:Policy>
+</wsdl:definitions>

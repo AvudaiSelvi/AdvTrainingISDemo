@@ -1,0 +1,30 @@
+2009-01-14 11:20:10 CET [ISS.0025.0001C] Integration Server 7.1.2.0 Build 124
+2009-01-14 11:20:10 CET [ISS.0025.0006I] License Manager started
+2009-01-14 11:20:10 CET [ISS.0025.0041I] FIPS mode not initialized
+2009-01-14 11:20:12 CET [ISS.0025.0049I] The Unlimited Policy File was found
+2009-01-14 11:20:14 CET [BAP.0000.0017W] Found invalid last-changed date, null, using default
+2009-01-14 11:20:14 CET [BAP.0000.0016W] Found invalid expire interval, null, using default
+2009-01-14 11:20:16 CET [ISS.0025.0017I] Repository Manager started
+2009-01-14 11:20:16 CET [ISS.0025.0024I] JDBC Connection Manager started
+2009-01-14 11:20:17 CET [ISS.0095.0002C] AuditLogManager: No Audit Schemas found, Audit logging disable.
+2009-01-14 11:20:17 CET [ISS.0025.0023I] Audit Log Manager started
+2009-01-14 11:20:17 CET [ISS.0025.0021I] ACL Manager started
+2009-01-14 11:20:19 CET [ISS.0025.0008I] State Manager started
+2009-01-14 11:20:19 CET [ISS.0025.0010I] Service Manager started
+2009-01-14 11:20:19 CET [ISS.0025.0020I] Validation Processor started
+2009-01-14 11:20:19 CET [ISS.0025.0022I] Statistics Processor started
+2009-01-14 11:20:19 CET [ISS.0025.0018I] Invoke Manager started
+2009-01-14 11:20:19 CET [ISS.0025.0012I] Cache Manager started
+2009-01-14 11:20:20 CET [ISS.0098.0120I] The default Broker was detected while initializing the dispatch.cnf file. Broker Settings will automatically be enabled.
+2009-01-14 11:20:22 CET [ISS.0098.0026I] Document Store DefaultStore initialized
+2009-01-14 11:20:23 CET [ISS.0098.0026I] Document Store VolatileTriggerStore initialized
+2009-01-14 11:20:23 CET [ISS.0098.0026I] Document Store TriggerStore initialized
+2009-01-14 11:20:23 CET [ISS.0098.0026I] Document Store ResubmitStore initialized
+2009-01-14 11:20:23 CET [ISS.0098.0118E] The ISInternal functional alias on the JDBC Pools page must be configured to use an external database in order to create and manage AND and XOR trigger joins.
+2009-01-14 11:20:23 CET [ISS.0025.0032I] Dispatcher initialized
+2009-01-14 11:20:23 CET [ISS.0134.0010I] JMS subsystem is not configured
+2009-01-14 11:20:24 CET [SCC.0121.0093I] XA Recovery Store initialized
+2009-01-14 11:20:24 CET [agent.load.tartI] Loading registry config file C:\webMethods7\IntegrationServer\packages\AdvTrainingISDemo\pub\demo\asynchInvoke\.\config\fabric-agent.xml
+2009-01-14 11:20:24 CET [agent.load.rrorI] Error processing registry config file C:\webMethods7\IntegrationServer\packages\AdvTrainingISDemo\pub\demo\asynchInvoke\.\config\fabric-agent.xml
+2009-01-14 11:20:24 CET [ISS.0025.0054E] Fabric Agent initialization failed.
+2009-01-14 11:20:24 CET [ISS.0014.0054C] Error occurred while initializing server: com.webmethods.sc.xml.XmlHelperException: Cannot load lock manager config file .\config\locking\DBLockConfig.xml	at com.webmethods.sc.distributedlocking.util.ConfigHelper.loadNodeFromFile(ConfigHelper.java:103)	at com.webmethods.sc.distributedlocking.util.ConfigHelper.loadLockManagerConfigFromFile(ConfigHelper.java:78)	at com.wm.app.b2b.server.Server.run(Server.java:454)

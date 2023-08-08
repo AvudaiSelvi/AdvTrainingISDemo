@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">myIntDivide</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">SURhdGFDdXJzb3IgcGlwZWxpbmVDdXJzb3IgPSBwaXBlbGluZS5nZXRDdXJzb3IoKTsKClN0cmlu
+ZwludW0xID0gSURhdGFVdGlsLmdldFN0cmluZyggcGlwZWxpbmVDdXJzb3IsICJudW0xIiApOwpT
+dHJpbmcJbnVtMiA9IElEYXRhVXRpbC5nZXRTdHJpbmcoIHBpcGVsaW5lQ3Vyc29yLCAibnVtMiIg
+KTsKCmludCBpbnVtMSA9IEludGVnZXIucGFyc2VJbnQobnVtMSk7CmludCBpbnVtMiA9IEludGVn
+ZXIucGFyc2VJbnQobnVtMik7CgppZiAoaW51bTE8MCB8fCBpbnVtMiA8IDApIHsKCXRocm93IG5l
+dyBTZXJ2aWNlRXhjZXB0aW9uKCJEZW1vOiB0aHJvd24gQ2hlY2tlZCBFeGNlcHRpb24gKGNhbm5v
+dCBkaXZpZGUgbmVnYXRpdmUgbnVtYmVycyA6LSkiKTsKfSBlbHNlIHsKCWludCBpcmVzdWx0ID0g
+aW51bTEgLyBpbnVtMjsKCUlEYXRhVXRpbC5wdXRJbnQocGlwZWxpbmVDdXJzb3IsICJyZXN1bHQi
+LCBpcmVzdWx0KTsKfQpwaXBlbGluZUN1cnNvci5kZXN0cm95KCk7</value>
+</Values>

@@ -1,0 +1,196 @@
+/* -*- Mode: java -*-
+ *
+ * This sample topic publisher uses JNDI to lookup a
+ * TopicConnectionFactory used to create a connection to the Broker
+ * and a Topic to which a message will be published.
+ *
+ * The location of the JNDI provider is defined in the jndi.properties
+ * file.  This sample uses the JNDI lookup name
+ * "TopicConnectionFactory" for the TopicConnectionFactory and
+ * "SampleTopic" for the Topic.
+ *
+ * Usage: java Publisher [arguments] <message text> ...
+ * 
+ * Arguments:
+ *
+ *     -username <username>	The username if using SSL.
+ *     -password <password>	The password if using SSL
+ *
+ * Example: java Publisher "Hello, World!"
+ */
+
+import com.webmethods.jms.WmTopicConnectionFactory;
+import com.webmethods.jms.WmTopicConnection;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.jms.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Properties;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.File;
+
+public class Publisher {
+
+	// default constructor
+	public Publisher() {
+	}
+
+	// main entry point
+	public void run(String username, String password, List<String> messageText) {
+		System.out.println("running Publisher.");
+
+		Properties jndiProperties = null;
+		Context jndiContext = null;
+
+		TopicConnectionFactory tcf = null;
+		TopicConnection connection = null;
+		Topic topic = null;
+
+		try {
+
+			// load the jndi.properties file
+			try {
+				jndiProperties = new Properties();
+				File file = new File("jndi.properties");
+				jndiProperties.load(new FileInputStream(file));
+				System.out.println("loaded " + file.getAbsolutePath());
+			} catch (IOException ex) {
+				System.out.println("ERROR: jndi.properties not loaded");
+				ex.printStackTrace();
+				System.exit(0);
+			}
+
+			// connect to JNDI using jndi.properties
+			try {
+				jndiContext = new InitialContext(jndiProperties);
+				System.out.println("connected to JNDI provider");
+			} catch (NamingException ex) {
+				System.out.println("ERROR: failed to connect to JNDI provider");
+				ex.printStackTrace();
+				System.exit(0);
+			}
+
+			// lookup the administered objects
+			try {
+				tcf = (TopicConnectionFactory) 
+					jndiContext.lookup("SampleTopicConnectionFactory");
+				System.out.println("found TopicConnectionFactory in JNDI");
+
+				topic = (Topic) jndiContext.lookup("SampleTopic");
+				System.out.println("found SampleTopic in JNDI");
+			} catch (NamingException ex) {
+				System.out.println("ERROR: JNDI lookup failed");
+				ex.printStackTrace();
+				System.exit(0);
+			}
+		
+			// create a connection to the Broker
+			try {
+				connection = tcf.createTopicConnection(username, password);
+				System.out.println("connected to Broker \"" +
+						   ((WmTopicConnection) connection).getBroker() +
+						   "\"");
+			} catch (JMSException ex) {
+				assert tcf instanceof WmTopicConnectionFactory;
+				String broker = ((WmTopicConnectionFactory) tcf).getBrokerList();
+				System.out.println("ERROR: unable to connect to Broker \"" + 
+						   broker +
+						   "\"");
+				ex.printStackTrace();
+				System.exit(0);
+			}
+		
+			// publish the message
+			try {
+				TopicSession session = 
+				    connection.createTopicSession(false,
+								  TopicSession.AUTO_ACKNOWLEDGE);
+				TopicPublisher publisher = session.createPublisher(topic);
+
+				// *** a. change the code to create a MapMessage
+				MapMessage mapMsg = session.createMapMessage();
+
+				for (int i = 0; i < messageText.size(); i++) {
+
+					// *** b. CHANGE CODE to set name/value pairs into
+					// *** the "mapMsg", For example, if you publish
+					// *** "Hello" "World" set the name/value pairs to
+					// *** (Name = "0", value = "Hello"), (Name = "1",
+					// *** value = "World")
+
+					String key = Integer.toString(i);
+					String value = messageText.get(i);
+
+					mapMsg.setString(key, value);
+						    
+					System.out.printf("key %s set to %s", key, value);
+					System.out.println();
+				}
+
+				// *** c. Set the integer property "NumOfKeys" to the
+				// *** "messageText.size()"
+				
+				mapMsg.setIntProperty("NumOfKeys", messageText.size());
+		
+				// *** d. add code to publish the mapMsg
+
+				publisher.publish(mapMsg);
+						
+				System.out.println("published complete");
+		
+			} catch (Exception ex) {
+				System.out.println("ERROR: unable to publish message(s)");
+				ex.printStackTrace();
+				System.exit(0);
+			}
+	    
+			// close the connection
+			connection.close();
+			System.out.println("connection closed");
+		} catch (Exception ex) {
+			System.out.println("ERROR: unexpected error");
+			ex.printStackTrace();
+		}
+	}
+    
+	public static void main(String[] args) {
+		String username = null;
+		String password = null;
+		List<String> messageText = new ArrayList<String>();
+		
+		int index = 0;
+		while (index < args.length) {
+			if (args[index].equals("-username")) {
+				if ((++index) >= args.length) {
+					printUsage();
+				}
+				username = args[index++];
+			} else if (args[index].equals("-password")) {
+				if ((++index) >= args.length) {
+					printUsage();
+				}
+				password = args[index++];
+			} else {
+				messageText.add(args[index++]);
+			}
+		}
+	
+		new Publisher().run(username, password, messageText);
+	}
+    
+	static void printUsage() {
+		System.out.println();
+		System.out.println("Usage: java Publisher [arguments] <message text> ...");
+		System.out.println("  arguments:");
+		System.out.println("	-username <username>	The username if using SSL");
+		System.out.println("	-password <password>	The password if using SSL");
+		System.out.println();
+		System.out.println("Example: java Publisher \"Hello, World!\"");
+		
+		System.exit(0);
+	}
+}

@@ -1,0 +1,219 @@
+/* -*- Mode: java -*-
+ *
+ * This sample topic subscriber uses JNDI to lookup a
+ * TopicConnectionFactory used to create a connection to the Broker
+ * and a Topic to which a subscription is made. It then loops
+ * indefintely receiving messages and printing the message content.
+ *
+ * The location of the JNDI provider is defined in the jndi.properties
+ * file.  This sample uses the JNDI lookup name
+ * "TopicConnectionFactory" for the TopicConnectionFactory and
+ * "SampleTopic" for the Topic.
+ *
+ * Usage: java Subscriber [arguments]
+ *
+ * Arguments:
+ *
+ *     -username <username>     The username if using SSL.
+ *     -password <password>     The password if using SSL
+ *
+ * Example: java Subscriber
+ */
+
+import com.webmethods.jms.WmTopicConnection;
+import com.webmethods.jms.WmTopicConnectionFactory;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.jms.*;
+import java.util.Properties;
+import java.io.FileInputStream;
+import java.io.File;
+import java.io.IOException;
+
+public class Subscriber {
+	public Subscriber ()
+	{
+	}
+
+	public void run(String username, String password) {
+		System.out.println("running Subscriber");
+
+		Properties jndiProperties = null;
+		Context jndiContext = null;
+
+		TopicConnectionFactory tcf = null;
+		TopicConnection connection = null;
+		Topic topic = null;
+
+		try {
+			// load the jndi.properties file
+			try {
+				jndiProperties = new Properties();
+				File file = new File("jndi.properties");
+				jndiProperties.load(new FileInputStream(file));
+				System.out.println("loaded " + file.getAbsolutePath());
+			} catch (IOException ex) {
+				System.out.println("ERROR: jndi.properties not loaded");
+				ex.printStackTrace();
+				System.exit(0);
+			}
+
+			// connect to JNDI using jndi.properties
+			try {
+				jndiContext = new InitialContext(jndiProperties);
+				System.out.println("connected to JNDI provider");
+			} catch (NamingException ex) {
+				System.out.println("ERROR: failed to connect to JNDI provider");
+				ex.printStackTrace();
+				System.exit(0);
+			}
+
+			// lookup the administered objects
+			try {
+				tcf = 
+				    (TopicConnectionFactory) 
+				    jndiContext.lookup("SampleTopicConnectionFactorySub");
+				System.out.println("found TopicConnectionFactory in JNDI");
+
+				topic = (Topic) jndiContext.lookup("SampleTopic");
+				System.out.println("found SampleTopic in JNDI");
+			} catch (NamingException ex) {
+				System.out.println("ERROR: JNDI lookup failed");
+				ex.printStackTrace();
+				System.exit(0);
+			}
+
+			// create a connection to the Broker
+			try {
+				connection = tcf.createTopicConnection(username, password);
+				System.out.println("connected to Broker \"" +
+						   ((WmTopicConnection) connection).getBroker() +
+						   "\"");
+			} catch (JMSException ex) {
+				String broker = ((WmTopicConnectionFactory) tcf).getBrokerList();
+				System.out.println("ERROR: unable to connect to Broker \"" +
+						   broker 
+						   + "\"");
+				ex.printStackTrace();
+				System.exit(0);
+			}
+
+			// receive messages
+			try {
+				TopicSession session = 
+				    connection.createTopicSession(false, 
+								  TopicSession.AUTO_ACKNOWLEDGE);
+
+				// *** a. CREATE a durable subscriber for the
+				// *** "SampleTopic" with a selector (filter) of
+				// *** "NumOfKeys" greater than one
+				TopicSubscriber subscriber = session.???(
+					???,
+					???,
+					???",
+					false);
+				
+				connection.start();
+
+				Message msg = null;
+				while (true) {
+
+					// *** b. change the following line of code
+					// *** to receive a new message with the subscriber
+					
+					msg = subscriber.???();
+					
+					if (msg == null) {
+						break;
+					}
+					if (! (msg instanceof MapMessage)) {
+					
+						System.out.printf(
+							"received \"%s\" message but expected a MapMessage",
+							msg.getClass().getName());
+						continue;
+					}
+
+					System.out.println("received MapMessage");
+
+					// *** c. Change the "null" to cast the
+					// *** received "msg" to a MapMessage in the mapmsg variable.
+					// *** We already verified (see above) that msg is indeed an 
+					// *** instance of MapMessage.
+					
+					MapMessage mapmsg = ???;
+
+					// *** d. Change the next line of code to set the
+					// *** "NumOfKeys" variable to
+					// *** the integer property "NumOfKeys" of our mapmsg.
+					
+					int NumOfKeys = mapmsg.???(???);
+
+					assert 1 < NumOfKeys; // broker took care of this?
+					
+					String SecondToLast = Integer.toString(NumOfKeys - 2);
+					
+					// *** e. Get the value
+					// *** associated with the
+					// *** "SecondToLast" key
+
+					String wordFound = mapmsg.???(SecondToLast);  
+
+					System.out.printf("The second to last word was %s at position %s",
+						wordFound,
+						SecondToLast);
+				}
+			} catch (Exception ex) {
+				System.out.println("ERROR: unable to receive messages");
+				ex.printStackTrace();
+				System.exit(0);
+			}		    
+			// close the connection
+			connection.close();
+			System.out.println("connection closed");
+		} catch (Exception ex) {
+			ex.printStackTrace();
+			System.exit(0);
+		}
+	}
+
+	public static void main(String[] args) {
+		String username = null;
+		String password = null;
+
+		int index = 0;
+		while (index < args.length) {
+			if (args[index].equals("-username")) {
+				if ((++index) >= args.length) {
+					printUsage();
+				}
+				username = args[index++];
+			} else if (args[index].equals("-password")) {
+				if ((++index) >= args.length) {
+				    printUsage();
+				}
+				password = args[index++];
+			} else {
+				printUsage();
+			}
+		}
+
+		new Subscriber().run(username, password);
+	}
+
+	static void printUsage() {
+		System.out.println();
+		System.out.println("Usage: java Subscriber [arguments]");
+		System.out.println();
+		System.out.println("Arguments:");
+		System.out.println();
+		System.out.println("  -username <username>  The username if using SSL");
+		System.out.println("  -password <password>  The password if using SSL");
+		System.out.println();
+		System.out.println("Example: java Subscriber");
+
+		System.exit(0);
+	}
+}

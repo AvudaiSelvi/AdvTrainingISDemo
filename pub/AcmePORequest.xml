@@ -1,0 +1,38 @@
+<?xml version="1.0" ?> 
+<AcmePurchaseOrderRequest>
+   <header>
+      <Buyer>
+         <Attention>Audrey Doucet</Attention>
+         <Addr1>7400 Plano Parkway</Addr1>
+         <Addr2></Addr2>
+         <City>Plano</City>
+         <State>TX</State>
+         <Zip>75007</Zip>
+      </Buyer>
+      <ShipTo>
+         <Attention>Audrey Doucet</Attention>
+         <Addr1>7400 Plano Parkway</Addr1>
+         <Addr2></Addr2>
+         <City>Plano</City>
+         <State>TX</State>
+         <Zip>75007</Zip>
+      </ShipTo>
+   </header>
+   <orderMessage>
+      <orderMessageHeader>
+         <totalCost>500</totalCost> 
+      </orderMessageHeader>
+      <orderLineItem>
+         <unitCost>20.0</unitCost> 
+         <description>Sweater</description> 
+         <supplierPartID>100</supplierPartID> 
+         <quantity>20</quantity> 
+      </orderLineItem>
+      <orderLineItem>
+         <unitCost>2</unitCost> 
+         <description>Socks</description> 
+         <supplierPartID>200</supplierPartID> 
+         <quantity>50</quantity> 
+      </orderLineItem>
+   </orderMessage>
+</AcmePurchaseOrderRequest>

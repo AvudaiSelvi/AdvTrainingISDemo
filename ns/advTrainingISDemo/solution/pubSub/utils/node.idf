@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">interface</value>
+  <value name="node_nsName">advTrainingISDemo.solution.pubSub.utils</value>
+  <value name="is_public">false</value>
+  <value name="shared">Ly8gNTAwMDAwIG1pZ2h0IGJlIGEgZ29vZCBzdGFydGluZyBwb2ludAoKc3RhdGljIGxvbmcgcmVx
+dWlyZWRJdGVyYXRpb25zID0gNTAwMDAwOyAKc3RhdGljIGxvbmcgSW5pdFRpbWUgPSAwOwpzdGF0
+aWMgbG9uZyBDb3VudCA9IDA7CnByaXZhdGUgc3RhdGljIHZvaWQgbG9nZ2VyICggU3RyaW5nIG1l
+c3NhZ2UgKQoKewogICAgICAgICAgICAgICBWYWx1ZXMgaW5wdXQgPSBuZXcgVmFsdWVzKCk7CiAg
+ICAgICAgICAgICAgIGlucHV0LnB1dCgibWVzc2FnZSIsIG1lc3NhZ2UpOwoKICAgICAgICAgICAg
+ICAgdHJ5IHsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFNlcnZpY2UuZG9JbnZva2Uo
+InB1Yi5mbG93IiwgImRlYnVnTG9nIiwgaW5wdXQpOyAgICAgICAKICAgICAgICAgICAgICAgfQog
+ICAgICAgICAgICAgICBjYXRjaCAoRXhjZXB0aW9uIGUpCiAgICAgICAgICAgICAgIHsKICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgIFN5c3RlbS5vdXQucHJpbnRsbihlLnRvU3RyaW5nKCkp
+OwogICAgICAgICAgICAgICB9Cgp9CgoKCQ==</value>
+  <value name="encodeutf8">true</value>
+  <value name="extends"></value>
+  <array name="implements" type="value" depth="1">
+  </array>
+  <array name="imports" type="value" depth="1">
+  </array>
+</Values>

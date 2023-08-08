@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">checkServiceThread</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">IAovLyBwaXBlbGluZSAgIApJRGF0YUN1cnNvciBwaXBlbGluZUN1cnNvciA9IHBpcGVsaW5lLmdl
+dEN1cnNvcigpOwoJU2VydmljZVRocmVhZCBzZXJ2aWNlVGhyZWFkID0gKFNlcnZpY2VUaHJlYWQp
+SURhdGFVdGlsLmdldCggcGlwZWxpbmVDdXJzb3IsICJzZXJ2aWNlVGhyZWFkIiApOwoJU3RyaW5n
+IHN0YXR1cyA9IG51bGw7CgovL0F0dGVtcHQgdG8gc2VlIGlmIHRocmVhZCBpcyBydW5uaW5nIG9y
+IGZpbmlzaGVkCgkJCXRyeQoJCQl7CgkJCQkvL2NoZWNrIHRvIHNlZSBpZiBzZXJ2aWNlVGhyZWFk
+IGlzIGV4ZWN1dGluZwoJCQkJLy9yZXR1cm5zIG51bGwgaWYgbm90IGRvbmUsIG91dHB1dCBpZiBk
+b25lCgkJCQlJRGF0YSBvdXRwdXQgPSBzZXJ2aWNlVGhyZWFkLmdldERhdGEoKTsKCQkJCXN0YXR1
+cyA9Im9rIjsKCQkJfQoJCQljYXRjaCAoIEV4Y2VwdGlvbiBlICkgCgkJCXsKCQkJCXN0YXR1cyA9
+ICJrYXB1dCI7CgkJCQkvL2ltcGxlbWVudCBjdXN0b20gZXhjZXB0aW9uIGhhbmRsaW5nIGhlcmUu
+CgkJCX0KCklEYXRhVXRpbC5wdXQoIHBpcGVsaW5lQ3Vyc29yLCAic3RhdHVzIiwgc3RhdHVzICk7
+CnBpcGVsaW5lQ3Vyc29yLmRlc3Ryb3koKTsKCg==</value>
+</Values>

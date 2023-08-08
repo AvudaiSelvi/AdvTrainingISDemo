@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">webServiceDescriptor</value>
+  <value name="node_nsName">advTrainingISDemo.solution.webServices.async.consume:callMyDivideIntsWS</value>
+  <value name="node_pkg">AdvTrainingISDemo</value>
+  <value name="node_comment"></value>
+  <value name="is_public">false</value>
+  <Boolean name="inbound">false</Boolean>
+  <Boolean name="WSICompliant">false</Boolean>
+  <value name="SOAPProtocol">SOAP 1.1 Protocol</value>
+  <value name="targetNamespace">http://sagbase/advTrainingIS.webServices.async.provider:myDivideIntsWS</value>
+  <Boolean name="attachmentEnabled">false</Boolean>
+  <number name="mtomThreshold" type="Integer">0</number>
+  <array name="externalWSDLSources" type="record" depth="1">
+    <record javaclass="com.wm.util.Values">
+      <value name="contextURI">http://localhost:5555/</value>
+      <value name="locationURI">advTrainingISDemo.solution.webServices.async.consume.callMyDivideIntsWS?wsdl=wsdl0</value>
+      <byte name="source">
+PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjx3c2RsOmRlZmluaXRpb25zIG5hbWU9Im15RGl2aWRlSW50c1dTIiB0YXJnZXROYW1lc3BhY2U9Imh0dHA6Ly9zYWdiYXNlL2FkdlRyYWluaW5nSVMud2ViU2VydmljZXMuYXN5bmMucHJvdmlkZXI6bXlEaXZpZGVJbnRzV1MiIHhtbG5zOnNvYXBlbmM9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3NvYXAvZW5jb2RpbmcvIiB4bWxuczp3c2E9Imh0dHA6Ly93d3cudzMub3JnLzIwMDUvMDgvYWRkcmVzc2luZyIgeG1sbnM6aHR0cD0iaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3NkbC9odHRwLyIgeG1sbnM6c29hcGptcz0iaHR0cDovL3d3dy53My5vcmcvMjAxMC9zb2Fwam1zLyIgeG1sbnM6dG5zPSJodHRwOi8vc2FnYmFzZS9hZHZUcmFpbmluZ0lTLndlYlNlcnZpY2VzLmFzeW5jLnByb3ZpZGVyOm15RGl2aWRlSW50c1dTIiB4bWxuczp3c2RsPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93c2RsLyIgeG1sbnM6eHNkPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSIgeG1sbnM6bWltZT0iaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3NkbC9taW1lLyIgeG1sbnM6c29hcD0iaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3NkbC9zb2FwLyIgeG1sbnM6c29hcDEyPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93c2RsL3NvYXAxMi8iPg0KICA8d3NkbDp0eXBlcz4NCiAgICA8eHNkOnNjaGVtYSB0YXJnZXROYW1lc3BhY2U9Imh0dHA6Ly9zYWdiYXNlL2FkdlRyYWluaW5nSVMud2ViU2VydmljZXMuYXN5bmMucHJvdmlkZXI6bXlEaXZpZGVJbnRzV1MiIHhtbG5zOnRucz0iaHR0cDovL3NhZ2Jhc2UvYWR2VHJhaW5pbmdJUy53ZWJTZXJ2aWNlcy5hc3luYy5wcm92aWRlcjpteURpdmlkZUludHNXUyIgeG1sbnM6eHNkPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSI+DQogICAgICAgICAgPHhzZDplbGVtZW50IG5hbWU9Im15RGl2aWRlSW50cyIgdHlwZT0idG5zOm15RGl2aWRlSW50cyIvPg0KICAgICAgICAgIDx4c2Q6ZWxlbWVudCBuYW1lPSJteURpdmlkZUludHNSZXNwb25zZSIgdHlwZT0idG5zOm15RGl2aWRlSW50c1Jlc3BvbnNlIi8+DQogICAgICAgICAgPHhzZDpjb21wbGV4VHlwZSBuYW1lPSJteURpdmlkZUludHMiPg0KICAgICAgICAgICAgPHhzZDpzZXF1ZW5jZT4NCiAgICAgICAgICAgICAgPHhzZDplbGVtZW50IG5hbWU9Im51bTEiIG5pbGxhYmxlPSJ0cnVlIiB0eXBlPSJ4c2Q6c3RyaW5nIi8+DQogICAgICAgICAgICAgIDx4c2Q6ZWxlbWVudCBuYW1lPSJudW0yIiBuaWxsYWJsZT0idHJ1ZSIgdHlwZT0ieHNkOnN0cmluZyIvPg0KICAgICAgICAgICAgPC94c2Q6c2VxdWVuY2U+DQogICAgICAgICAgPC94c2Q6Y29tcGxleFR5cGU+DQogICAgICAgICAgPHhzZDpjb21wbGV4VHlwZSBuYW1lPSJteURpdmlkZUludHNSZXNwb25zZSI+DQogICAgICAgICAgICA8eHNkOnNlcXVlbmNlPg0KICAgICAgICAgICAgICA8eHNkOmVsZW1lbnQgbmFtZT0icmVzdWx0IiBuaWxsYWJsZT0idHJ1ZSIgdHlwZT0ieHNkOnN0cmluZyIvPg0KICAgICAgICAgICAgPC94c2Q6c2VxdWVuY2U+DQogICAgICAgICAgPC94c2Q6Y29tcGxleFR5cGU+DQogICAgICAgIAk8L3hzZDpzY2hlbWE+DQogIDwvd3NkbDp0eXBlcz4NCiAgPHdzZGw6bWVzc2FnZSBuYW1lPSJteURpdmlkZUludHNXU19Qb3J0VHlwZV9teURpdmlkZUludHMiPg0KICAgIDx3c2RsOnBhcnQgbmFtZT0icGFyYW1ldGVycyIgZWxlbWVudD0idG5zOm15RGl2aWRlSW50cyI+DQogICAgPC93c2RsOnBhcnQ+DQogIDwvd3NkbDptZXNzYWdlPg0KICA8d3NkbDptZXNzYWdlIG5hbWU9Im15RGl2aWRlSW50c1dTX1BvcnRUeXBlX215RGl2aWRlSW50c1Jlc3BvbnNlIj4NCiAgICA8d3NkbDpwYXJ0IG5hbWU9InBhcmFtZXRlcnMiIGVsZW1lbnQ9InRuczpteURpdmlkZUludHNSZXNwb25zZSI+DQogICAgPC93c2RsOnBhcnQ+DQogIDwvd3NkbDptZXNzYWdlPg0KICA8d3NkbDpwb3J0VHlwZSBuYW1lPSJteURpdmlkZUludHNXU19Qb3J0VHlwZSI+DQogICAgPHdzZGw6b3BlcmF0aW9uIG5hbWU9Im15RGl2aWRlSW50cyI+DQogICAgICA8d3NkbDppbnB1dCBtZXNzYWdlPSJ0bnM6bXlEaXZpZGVJbnRzV1NfUG9ydFR5cGVfbXlEaXZpZGVJbnRzIj4NCiAgICA8L3dzZGw6aW5wdXQ+DQogICAgICA8d3NkbDpvdXRwdXQgbWVzc2FnZT0idG5zOm15RGl2aWRlSW50c1dTX1BvcnRUeXBlX215RGl2aWRlSW50c1Jlc3BvbnNlIj4NCiAgICA8L3dzZGw6b3V0cHV0Pg0KICAgIDwvd3NkbDpvcGVyYXRpb24+DQogIDwvd3NkbDpwb3J0VHlwZT4NCiAgPHdzZGw6YmluZGluZyBuYW1lPSJhZHZUcmFpbmluZ0lTX3dlYlNlcnZpY2VzX2FzeW5jX3Byb3ZpZGVyX215RGl2aWRlSW50c1dTX0JpbmRlciIgdHlwZT0idG5zOm15RGl2aWRlSW50c1dTX1BvcnRUeXBlIj4NCiAgICA8c29hcDpiaW5kaW5nIHN0eWxlPSJkb2N1bWVudCIgdHJhbnNwb3J0PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2h0dHAiLz4NCiAgICA8d3NwOlBvbGljeVJlZmVyZW5jZSBVUkk9IkFkZHJlc3NpbmciIHhtbG5zOndzcD0iaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNC8wOS9wb2xpY3kiLz4NCiAgICA8d3NkbDpvcGVyYXRpb24gbmFtZT0ibXlEaXZpZGVJbnRzIj4NCiAgICAgIDxzb2FwOm9wZXJhdGlvbiBzb2FwQWN0aW9uPSJhZHZUcmFpbmluZ0lTX3dlYlNlcnZpY2VzX2FzeW5jX3Byb3ZpZGVyX215RGl2aWRlSW50c1dTX0JpbmRlcl9teURpdmlkZUludHMiIHN0eWxlPSJkb2N1bWVudCIvPg0KICAgICAgPHdzZGw6aW5wdXQ+DQogICAgICAgIDxzb2FwOmJvZHkgcGFydHM9InBhcmFtZXRlcnMiIHVzZT0ibGl0ZXJhbCIvPg0KICAgICAgPC93c2RsOmlucHV0Pg0KICAgICAgPHdzZGw6b3V0cHV0Pg0KICAgICAgICA8c29hcDpib2R5IHBhcnRzPSJwYXJhbWV0ZXJzIiB1c2U9ImxpdGVyYWwiLz4NCiAgICAgIDwvd3NkbDpvdXRwdXQ+DQogICAgPC93c2RsOm9wZXJhdGlvbj4NCiAgPC93c2RsOmJpbmRpbmc+DQogIDx3c2RsOnNlcnZpY2UgbmFtZT0iYWR2VHJhaW5pbmdJUy53ZWJTZXJ2aWNlcy5hc3luYy5wcm92aWRlci5teURpdmlkZUludHNXUyI+DQogICAgPHdzZGw6cG9ydCBuYW1lPSJhZHZUcmFpbmluZ0lTX3dlYlNlcnZpY2VzX2FzeW5jX3Byb3ZpZGVyX215RGl2aWRlSW50c1dTX1BvcnQiIGJpbmRpbmc9InRuczphZHZUcmFpbmluZ0lTX3dlYlNlcnZpY2VzX2FzeW5jX3Byb3ZpZGVyX215RGl2aWRlSW50c1dTX0JpbmRlciI+DQogICAgICA8c29hcDphZGRyZXNzIGxvY2F0aW9uPSJodHRwOi8vc2FnYmFzZTo1NTU1L3dzL2FkdlRyYWluaW5nSVMud2ViU2VydmljZXMuYXN5bmMucHJvdmlkZXIubXlEaXZpZGVJbnRzV1MvYWR2VHJhaW5pbmdJU193ZWJTZXJ2aWNlc19hc3luY19wcm92aWRlcl9teURpdmlkZUludHNXU19Qb3J0Ii8+DQogICAgPHdzYTpFbmRwb2ludFJlZmVyZW5jZSB4bWxuczp3c2E9Imh0dHA6Ly93d3cudzMub3JnLzIwMDUvMDgvYWRkcmVzc2luZyI+PHdzYTpBZGRyZXNzPmh0dHA6Ly9zYWdiYXNlOjU1NTUvd3MvYWR2VHJhaW5pbmdJUy53ZWJTZXJ2aWNlcy5hc3luYy5wcm92aWRlci5teURpdmlkZUludHNXUy9hZHZUcmFpbmluZ0lTX3dlYlNlcnZpY2VzX2FzeW5jX3Byb3ZpZGVyX215RGl2aWRlSW50c1dTX1BvcnQ8L3dzYTpBZGRyZXNzPjwvd3NhOkVuZHBvaW50UmVmZXJlbmNlPg0KICAgIDwvd3NkbDpwb3J0Pg0KICA8L3dzZGw6c2VydmljZT4NCiAgICA8d3NwOlBvbGljeSBOYW1lPSJBZGRyZXNzaW5nIiB3c3U6SWQ9IkFkZHJlc3NpbmciIHhtbG5zOndzcD0iaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNC8wOS9wb2xpY3kiIHhtbG5zOndzdT0iaHR0cDovL2RvY3Mub2FzaXMtb3Blbi5vcmcvd3NzLzIwMDQvMDEvb2FzaXMtMjAwNDAxLXdzcy13c3NlY3VyaXR5LXV0aWxpdHktMS4wLnhzZCI+PHdzcDpFeGFjdGx5T25lPjx3c3A6QWxsPjx3c2F3OlVzaW5nQWRkcmVzc2luZyB3c2RsOnJlcXVpcmVkPSJ0cnVlIiB4bWxuczp3c2F3PSJodHRwOi8vd3d3LnczLm9yZy8yMDA2LzA1L2FkZHJlc3Npbmcvd3NkbCIgeG1sbnM6d3NkbD0iaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3NkbC8iLz48L3dzcDpBbGw+PC93c3A6RXhhY3RseU9uZT48L3dzcDpQb2xpY3k+DQo8L3dzZGw6ZGVmaW5pdGlvbnM+DQo=      </byte>
+      <number name="type" type="Integer">1</number>
+    </record>
+  </array>
+  <value name="externalWSDLURL">http://sagbase:5555/ws/advTrainingIS.webServices.async.provider:myDivideIntsWS?WSDL</value>
+  <value name="WSDLURL">http://sagbase:5555/ws/advTrainingIS.webServices.async.consume:callMyDivideIntsWS?WSDL</value>
+  <value name="definitionName">callMyDivideIntsWS</value>
+  <value name="version">_9_5</value>
+  <value name="schemaDomain">a185d368398ab1a2145187bffbe</value>
+  <Boolean name="rawArray">true</Boolean>
+  <array name="handlerList" type="record" depth="1">
+  </array>
+  <array name="binderList" type="record" depth="1">
+    <record javaclass="com.wm.util.Values">
+      <value name="binderName">advTrainingIS_webServices_async_provider_myDivideIntsWS_Binder</value>
+      <value name="portAddress">http://sagbase:5555/ws/advTrainingIS.webServices.async.provider.myDivideIntsWS/advTrainingIS_webServices_async_provider_myDivideIntsWS_Port</value>
+      <value name="portAlias">MyDivideIntsConsumerAlias</value>
+      <value name="bindingName">advTrainingIS_webServices_async_provider_myDivideIntsWS_Binder</value>
+      <value name="bindingStyle">document</value>
+      <value name="bindingUse">literal</value>
+      <value name="bindingType">SOAP</value>
+      <value name="portName">advTrainingIS_webServices_async_provider_myDivideIntsWS_Port</value>
+      <value name="portTypeName">myDivideIntsWS_PortType</value>
+      <value name="bindingTransport">http://schemas.xmlsoap.org/soap/http</value>
+      <value name="transportType">http</value>
+      <record name="operationMap" javaclass="com.wm.util.Values">
+        <value name="advTrainingIS_webServices_async_provider_myDivideIntsWS_Binder_myDivideInts">myDivideInts</value>
+      </record>
+      <value name="SOAPProtocol">SOAP 1.1 Protocol</value>
+      <value name="SOAPDirective">ws</value>
+      <Boolean name="useCSQ">false</Boolean>
+    </record>
+  </array>
+  <array name="operationList" type="record" depth="1">
+    <record javaclass="com.wm.util.Values">
+      <value name="operationName">myDivideInts</value>
+      <value name="serviceName">advTrainingISDemo.solution.webServices.async.consume.callMyDivideIntsWS_.connectors:myDivideIntsWS_PortType_myDivideInts</value>
+      <value name="originalMEPType">MEP_URI_IN_OUT</value>
+      <record name="requestElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">http://sagbase/advTrainingIS.webServices.async.provider:myDivideIntsWS:myDivideIntsWS_PortType_myDivideInts_Input</value>
+          <value name="docType">advTrainingISDemo.solution.webServices.async.consume.callMyDivideIntsWS_.docTypes:myDivideIntsWS_PortType_myDivideInts_Input</value>
+          <value name="nsOwner">advTrainingISDemo.solution.webServices.async.consume.callMyDivideIntsWS_.docTypes:myDivideIntsWS_PortType_myDivideInts_Input</value>
+          <number name="nsOwnerType" type="Integer">3</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <null name="originalDocName"/>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+      <record name="responseElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">http://sagbase/advTrainingIS.webServices.async.provider:myDivideIntsWS:myDivideIntsWS_PortType_myDivideInts_Output</value>
+          <value name="docType">advTrainingISDemo.solution.webServices.async.consume.callMyDivideIntsWS_.docTypes:myDivideIntsWS_PortType_myDivideInts_Output</value>
+          <value name="nsOwner">advTrainingISDemo.solution.webServices.async.consume.callMyDivideIntsWS_.docTypes:myDivideIntsWS_PortType_myDivideInts_Output</value>
+          <number name="nsOwnerType" type="Integer">3</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <null name="originalDocName"/>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+    </record>
+  </array>
+  <record name="namespaces" javaclass="com.wm.util.Values">
+    <value name="soapenc">http://schemas.xmlsoap.org/soap/encoding/</value>
+    <value name="wsp">http://schemas.xmlsoap.org/ws/2004/09/policy</value>
+    <value name="wsa">http://www.w3.org/2005/08/addressing</value>
+    <value name="wsdl">http://schemas.xmlsoap.org/wsdl/</value>
+    <value name="tns">http://sagbase/advTrainingIS.webServices.async.provider:myDivideIntsWS</value>
+    <value name="soapjms">http://www.w3.org/2010/soapjms/</value>
+    <value name="http">http://schemas.xmlsoap.org/wsdl/http/</value>
+    <value name="xsd">http://www.w3.org/2001/XMLSchema</value>
+    <value name="soap">http://schemas.xmlsoap.org/wsdl/soap/</value>
+    <value name="mime">http://schemas.xmlsoap.org/wsdl/mime/</value>
+    <value name="wsu">http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd</value>
+    <value name="soap12">http://schemas.xmlsoap.org/wsdl/soap12/</value>
+  </record>
+  <Boolean name="HeadersInPipelineEnabled">false</Boolean>
+  <Boolean name="validateSOAPResponse">true</Boolean>
+  <Boolean name="validateSchemaUsingXerces">true</Boolean>
+  <Boolean name="enableCompatibility">false</Boolean>
+  <array name="policyIds" type="value" depth="1">
+    <value>Addressing</value>
+  </array>
+  <Boolean name="registerDoctypes">true</Boolean>
+  <Boolean name="allTypes">false</Boolean>
+  <Boolean name="generateXOPObjectForBase64Binary">false</Boolean>
+  <value name="originURI">http://sagbase:5555/ws/advTrainingIS.webServices.async.provider:myDivideIntsWS?WSDL</value>
+  <value name="modifiable">false</value>
+  <value name="externalServiceName">{http://sagbase/advTrainingIS.webServices.async.provider:myDivideIntsWS}advTrainingIS.webServices.async.provider.myDivideIntsWS</value>
+  <array name="policyAttachmentList" type="record" depth="1">
+    <record javaclass="com.wm.util.Values">
+      <value name="policyId">Addressing</value>
+      <number name="bindingOperationMessageType" type="Integer">7</number>
+    </record>
+  </array>
+</Values>

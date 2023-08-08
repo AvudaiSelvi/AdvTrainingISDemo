@@ -1,0 +1,22 @@
+
+set $broker="Broker #1"
+set $server="localhost:6849"
+
+# connect to the Broker 
+connect to broker $broker server $server
+
+# initialize the  Broker for JMS
+initialize broker
+
+# bind the administered objects into JNDI
+bind topic "SampleTopic" with TopicName=Sample::Topic
+bind tcf "SampleTopicConnectionFactory" with brokerHost=$server brokerName=$broker group=SampleTopicConnectionGroup useXA=false
+bind tcf "SampleTopicConnectionFactorySub" with brokerHost=$server brokerName=$broker clientId=SubClient group=SampleTopicConnectionGroup useXA=false 
+
+# create the topic and client group on the Broker
+create topic Sample::Topic
+create group SampleTopicConnectionGroup
+
+# add permissions to the client Group
+permit group SampleTopicConnectionGroup to publish Sample::Topic
+permit group SampleTopicConnectionGroup to subscribe Sample::Topic

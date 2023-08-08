@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<IDataXMLCoder version="1.0">
+  <record javaclass="com.wm.util.Values">
+    <array name="Trends" type="record" depth="1">
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="id">Women</value>
+        <value name="name">Bev</value>
+        <value name="changeNum">1</value>
+      </record>
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="id">Colors</value>
+        <value name="name">Brown</value>
+        <value name="changeNum">1</value>
+      </record>
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="id">Men</value>
+        <value name="name">Dan</value>
+        <value name="changeNum">3</value>
+      </record>
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="id">Animals</value>
+        <value name="name">Ant</value>
+        <value name="changeNum">0</value>
+      </record>
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="id">Men</value>
+        <value name="name">Cain</value>
+        <value name="changeNum">2</value>
+      </record>
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="id">Women</value>
+        <value name="name">Amy</value>
+        <value name="changeNum">0</value>
+      </record>
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="id">Colors</value>
+        <value name="name">Coral</value>
+        <value name="changeNum">2</value>
+      </record>
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="id">Animals</value>
+        <value name="name">Dog</value>
+        <value name="changeNum">3</value>
+      </record>
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="id">Colors</value>
+        <value name="name">Amber</value>
+        <value name="changeNum">0</value>
+      </record>
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="id">Women</value>
+        <value name="name">Carol</value>
+        <value name="changeNum">2</value>
+      </record>
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="id">Animals</value>
+        <value name="name">Cat</value>
+        <value name="changeNum">2</value>
+      </record>
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="id">Men</value>
+        <value name="name">Arthur</value>
+        <value name="changeNum">0</value>
+      </record>
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="id">Colors</value>
+        <value name="name">DarkRed</value>
+        <value name="changeNum">3</value>
+      </record>
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="id">Women</value>
+        <value name="name">Deb</value>
+        <value name="changeNum">3</value>
+      </record>
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="id">Men</value>
+        <value name="name">Bob</value>
+        <value name="changeNum">1</value>
+      </record>
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="id">Animals</value>
+        <value name="name">Bee</value>
+        <value name="changeNum">1</value>
+      </record>
+    </array>
+  </record>
+</IDataXMLCoder>

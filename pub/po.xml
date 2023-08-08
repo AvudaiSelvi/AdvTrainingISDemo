@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<purchaseOrder orderDate="2001-02-02">
+  <header>
+    <PONumber>0001234</PONumber>
+    <shipTo>
+      <Attention>Theo Ezell</Attention>
+      <Addr1>100 Anywhere Street</Addr1>
+      <City>Nowhere</City>
+      <State>TX</State>
+      <Zip>72349-1023</Zip>
+    </shipTo>
+    <billTo>
+      <Attention>Doug Sheeran</Attention>
+      <Addr1>22 Elsewhere Blvd</Addr1>
+      <Addr2>Flat 23</Addr2>
+      <City>There</City>
+      <State>TX</State>
+      <Zip>72344</Zip>
+    </billTo>
+  </header>
+  <details>
+    <totalCost>148</totalCost>
+    <orderLineItems>
+      <unitCost>2</unitCost>
+      <desc>A cheap Item</desc>
+      <supplierPartID>1234</supplierPartID>
+      <quantity>2</quantity>
+    </orderLineItems>
+    <orderLineItems>
+      <unitCost>12</unitCost>
+      <desc>A more expensive one</desc>
+      <supplierPartID>99999</supplierPartID>
+      <quantity>12</quantity>
+    </orderLineItems>
+  </details>
+</purchaseOrder>
